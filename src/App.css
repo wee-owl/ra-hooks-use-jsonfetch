@@ -1,0 +1,63 @@
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+img, 
+svg {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100vh;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #000000;
+  text-rendering: optimizeLegibility;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+  cursor: default;
+}
+
+.main {
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.loading {
+  position: relative;
+}
+
+@keyframes load {
+  to {transform: rotate(360deg);}
+}
+
+.loader {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #808080;
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+  animation: load 1s linear infinite;
+}
