@@ -3,7 +3,7 @@ import useJsonFetch from '../hooks/useJsonFetch';
 
 
 function Error({ url }) {
-  const { error } = useJsonFetch(url);
+  const [{ error }] = useJsonFetch(url);
 
   return (
     <div className='error'>

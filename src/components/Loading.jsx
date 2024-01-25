@@ -3,7 +3,7 @@ import useJsonFetch from '../hooks/useJsonFetch';
 
 
 function Loading({ url }) {
-  const { loading } = useJsonFetch(url);
+  const [{ loading }] = useJsonFetch(url);
 
   return (
     <div className='loading'>

@@ -3,7 +3,7 @@ import useJsonFetch from '../hooks/useJsonFetch';
 
 
 function Data({ url }) {
-  const { data } = useJsonFetch(url);
+  const [{ data }] = useJsonFetch(url);
 
   return (
     <div className='data'>

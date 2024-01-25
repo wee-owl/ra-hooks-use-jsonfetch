@@ -28,7 +28,7 @@ function useJsonFetch(url, opts) {
     getResult();
   }, []);
 
-  return { data, error, loading };
+  return [{ data, error, loading }];
 }
 
 export default useJsonFetch;
